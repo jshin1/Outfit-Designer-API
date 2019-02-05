@@ -43,21 +43,43 @@ shoes = Category.create(name: 'shoes')
 
 # CLOTHES
 
-olive_parka = Clothe.create(brand: 'Canada Goose', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/olive_CGparka.png', category_id: jacket.id, color_id: olive.id)
-burgundy_monk_straps = Clothe.create(brand: 'N/A', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/burgundy_monk_straps.png', category_id: shoes.id, color_id: burgundy.id)
-ones = Clothe.create(brand: 'Jordan', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/red_blue_1s.png', category_id: shoes.id, color_id: white.id)
-flyknit_racers = Clothe.create(brand: 'Nike', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/white_flyknit_racers.png', category_id: shoes.id, color_id: white.id)
-olive_chinos = Clothe.create(brand: 'N/A', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/olivegreen_pants.png', category_id: bottom.id, color_id: olive.id)
-pinstripe_trousers = Clothe.create(brand: 'N/A', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/pinstripe_trousers.png', category_id: bottom.id, color_id: navy.id)
-yellow_shorts = Clothe.create(brand: 'N/A', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/yellow_shorts.png', category_id: bottom.id, color_id: yellow.id)
-grey_jacket = Clothe.create(brand: 'AllSaints', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/allsaints_grey_jacket.jpg', category_id: jacket.id, color_id: grey.id)
-kings_hat = Clothe.create(brand: '47Brand', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/black_kings_hat.png', category_id: hat.id, color_id: black.id)
-mets_hat = Clothe.create(brand: '47Brand', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/47-brand-mlb-clean-up-cap-mens.png', category_id: hat.id, color_id: blue.id)
-wade_jersey = Clothe.create(brand: 'Nike', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/wade_jersey_vice.png', category_id: top.id, color_id: white.id)
-denim_shirt = Clothe.create(brand: 'N/A', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/s7-1283986_lifestyle.png', category_id: top.id, color_id: denim.id)
-navy_bomber = Clothe.create(brand: 'N/A', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/navy_bomber.png', category_id: jacket.id, color_id: navy.id)
-red_varsity = Clothe.create(brand: 'N/A', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/red_varsityjacket.png', category_id: jacket.id, color_id: red.id)
-denim_sherpa = Clothe.create(brand: 'N/A', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/sherpa_denim_jacket.png', category_id: jacket.id, color_id: denim.id)
+#Hats
+chance_hat = Clothe.create(name: 'Chance The Rapper Hat', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/chance_hat.png', category_id: hat.id, color_id: black.id)
+kings_hat = Clothe.create(name: 'Kings Hat', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/black_kings_hat.png', category_id: hat.id, color_id: black.id)
+mets_hat = Clothe.create(name: 'Mets Hats', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/47-brand-mlb-clean-up-cap-mens.png', category_id: hat.id, color_id: blue.id)
+bruins_hat = Clothe.create(name: 'Bruins Hat', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/bruins_hat.png', category_id: hat.id, color_id: yellow.id)
+
+#Tops
+wade_jersey = Clothe.create(name: 'Miami Heat Jersey (Miami Vice)', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/wade_jersey_vice.png', category_id: top.id, color_id: white.id)
+denim_shirt = Clothe.create(name: 'Denim Shirt', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/s7-1283986_lifestyle.png', category_id: top.id, color_id: denim.id)
+navy_polo = Clothe.create(name: 'Navy Polo', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/Tommy-Hilfiger-Navy-Polo.png', category_id: top.id, color_id: denim.id)
+white_polo = Clothe.create(name: 'White Polo', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/RLpolo.png', category_id: top.id, color_id: denim.id)
+
+#Jackets
+olive_parka = Clothe.create(name: 'Canada Goose Parka', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/olive_CGparka.png', category_id: jacket.id, color_id: olive.id)
+grey_jacket = Clothe.create(name: 'AllSaints Jacket', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/allsaints_grey_jacket.jpg', category_id: jacket.id, color_id: grey.id)
+navy_bomber = Clothe.create(name: 'Navy Bomber', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/navy_bomber.png', category_id: jacket.id, color_id: navy.id)
+red_varsity = Clothe.create(name: 'Varsity Jacket', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/red_varsityjacket.png', category_id: jacket.id, color_id: red.id)
+denim_sherpa = Clothe.create(name: 'Denim Sherpa Jacket', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/sherpa_denim_jacket.png', category_id: jacket.id, color_id: denim.id)
+
+#Bottoms
+olive_chinos = Clothe.create(name: 'Olive Chinos', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/olivegreen_pants.png', category_id: bottom.id, color_id: olive.id)
+pinstripe_trousers = Clothe.create(name: 'Pinstripe Trousers', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/pinstripe_trousers.png', category_id: bottom.id, color_id: navy.id)
+jeans = Clothe.create(name: 'Jeans', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/jeans.png', category_id: bottom.id, color_id: denim.id)
+yellow_shorts = Clothe.create(name: 'Yellow Shorts', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/yellow_shorts.png', category_id: bottom.id, color_id: yellow.id)
+blue_shorts = Clothe.create(name: 'Blue Shorts', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/NOTTINGHAM_BLUE_5_INCH_FRONT_1512x1512_e1d893bb-80b3-4e2b-aedd-02fdba5a02c4_1600x.png', category_id: bottom.id, color_id: blue.id)
+
+#Shoes
+burgundy_monk_straps = Clothe.create(name: 'Monk Straps', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/burgundy_monk_straps.png', category_id: shoes.id, color_id: burgundy.id)
+ones = Clothe.create(name: 'Jordan 1', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/red_blue_1s.png', category_id: shoes.id, color_id: white.id)
+flyknit_racers = Clothe.create(name: 'Nike Flyknit Racers', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/white_flyknit_racers.png', category_id: shoes.id, color_id: white.id)
+
+
+
+
+
+
+
 
 # OCCASIONS
 

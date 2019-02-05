@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_01_31_151122) do
   end
 
   create_table "clothes", force: :cascade do |t|
-    t.string "brand"
+    t.string "name"
     t.string "image_url"
     t.integer "category_id"
     t.integer "color_id"
