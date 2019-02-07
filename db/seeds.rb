@@ -19,19 +19,26 @@ ji = User.create(first_name: 'Ji', last_name: 'Shin')
 
 # COLORS
 
-olive = Color.create(name: 'olive')
-red = Color.create(name: 'red')
-burgundy = Color.create(name: 'burgundy')
-orange = Color.create(name: 'orange')
-yellow = Color.create(name: 'yellow')
-green = Color.create(name: 'green')
-blue = Color.create(name: 'blue')
-purple = Color.create(name: 'purple')
-black = Color.create(name: 'black')
-grey = Color.create(name: 'grey')
-white = Color.create(name: 'white')
-navy = Color.create(name: 'navy')
-denim = Color.create(name: 'denim')
+magenta = Color.create(name: 'magenta', complementary_color: 'green')
+red_magenta = Color.create(name: 'red magenta', complementary_color: 'blue green')
+red = Color.create(name: 'red', complementary_color: 'cyan')
+red_orange = Color.create(name: 'red orange', complementary_color: 'blue')
+yellow = Color.create(name: 'yellow', complementary_color: 'violet blue')
+yellow_green = Color.create(name: 'yellow green', complementary_color: 'violet')
+green = Color.create(name: 'green', complementary_color: 'magenta')
+blue_green = Color.create(name: 'blue green', complementary_color: 'red magenta')
+cyan = Color.create(name: 'cyan', complementary_color: 'red')
+blue = Color.create(name: 'blue', complementary_color: 'red orange')
+violet_blue = Color.create(name: 'violet blue', complementary_color: 'yellow')
+violet = Color.create(name: 'violet', complementary_color: 'yellow green')
+
+denim = Color.create(name: 'denim', complementary_color: 'N/A')
+white = Color.create(name: 'white', complementary_color: 'N/A')
+navy = Color.create(name: 'navy', complementary_color: 'N/A')
+black = Color.create(name: 'black', complementary_color: 'N/A')
+grey = Color.create(name: 'grey', complementary_color: 'N/A')
+burgundy = Color.create(name: 'burgundy', complementary_color: 'N/A')
+olive = Color.create(name: 'olive', complementary_color: 'N/A')
 
 # CATEGORIES
 
@@ -52,8 +59,8 @@ bruins_hat = Clothe.create(name: 'Bruins Hat', image_url: 'https://s3.us-east-2.
 #Tops
 wade_jersey = Clothe.create(name: 'Miami Heat Jersey (Miami Vice)', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/wade_jersey_vice.png', category_id: top.id, color_id: white.id)
 denim_shirt = Clothe.create(name: 'Denim Shirt', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/s7-1283986_lifestyle.png', category_id: top.id, color_id: denim.id)
-navy_polo = Clothe.create(name: 'Navy Polo', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/Tommy-Hilfiger-Navy-Polo.png', category_id: top.id, color_id: denim.id)
-white_polo = Clothe.create(name: 'White Polo', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/RLpolo.png', category_id: top.id, color_id: denim.id)
+navy_polo = Clothe.create(name: 'Navy Polo', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/Tommy-Hilfiger-Navy-Polo.png', category_id: top.id, color_id: navy.id)
+white_polo = Clothe.create(name: 'White Polo', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/RLpolo.png', category_id: top.id, color_id: white.id)
 
 #Jackets
 olive_parka = Clothe.create(name: 'Canada Goose Parka', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/olive_CGparka.png', category_id: jacket.id, color_id: olive.id)
@@ -74,19 +81,30 @@ burgundy_monk_straps = Clothe.create(name: 'Monk Straps', image_url: 'https://s3
 ones = Clothe.create(name: 'Jordan 1', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/red_blue_1s.png', category_id: shoes.id, color_id: white.id)
 flyknit_racers = Clothe.create(name: 'Nike Flyknit Racers', image_url: 'https://s3.us-east-2.amazonaws.com/outfitdesignr/white_flyknit_racers.png', category_id: shoes.id, color_id: white.id)
 
-
-
-
-
-
-
-
 # OCCASIONS
 
 biscas = Occasion.create(name: 'business casual')
 casual = Occasion.create(name: 'casual')
 formal = Occasion.create(name: 'formal')
 fratty = Occasion.create(name: 'fratty')
+
+# OUTFITS
+
+outfit = Outfit.create(occasion_id: casual.id, user_id: ji.id)
+
+
+# OUTFIT CLOTHES
+
+OutfitClothe.create(outfit_id: outfit.id, clothe_id: kings_hat.id)
+OutfitClothe.create(outfit_id: outfit.id, clothe_id: denim_shirt.id)
+OutfitClothe.create(outfit_id: outfit.id, clothe_id: olive_parka.id)
+OutfitClothe.create(outfit_id: outfit.id, clothe_id: olive_chinos.id)
+OutfitClothe.create(outfit_id: outfit.id, clothe_id: flyknit_racers.id)
+
+
+
+
+
 
 #USER CLOTHES
 

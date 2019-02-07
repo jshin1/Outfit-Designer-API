@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_01_31_151122) do
 
   create_table "colors", force: :cascade do |t|
     t.string "name"
+    t.string "complementary_color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
