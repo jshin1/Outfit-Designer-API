@@ -6,6 +6,15 @@ class Api::V1::OutfitClothesController < ApplicationController
     render json: @outfit_clothes
   end
 
+  def create
+    @outfit_clothe = OutfitClothe.create(outfit_clothe_params)
+    if @outfit_clothe.valid?
+      render json: @outfit_clothe, status: :ok
+    else
+      render json: { errors: @outfit_clothe.errors.full_messages }, status: :unprocessible_entity
+    end
+  end
+
   def update
     @outfit_clothe.update(outfit_clothe_params)
     if @outfit_clothe.save
