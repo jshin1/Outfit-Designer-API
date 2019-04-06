@@ -11,6 +11,8 @@ Rails.application.routes.draw do
        resources :user_clothes, only: [:index, :update]
        resources :colors, only: [:index, :update]
 
+       post "/login", to: "users#login"
+
        # get '/hats', to: 'categories#hats'
      end
    end
